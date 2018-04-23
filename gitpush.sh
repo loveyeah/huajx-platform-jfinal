@@ -15,9 +15,9 @@ git commit -am "$msg"
 echo "git push -u origin master"
 git push -u origin master
 
-util=./huajx-util
+util=huajx-util
 
-if [ test -d "$util" ] ; then
+if [ -d "$util" ] ; then
   cd $util
   git pull origin master
   git add .
@@ -25,9 +25,9 @@ if [ test -d "$util" ] ; then
   git push -u origin master
 fi
 
-core=./huajx-core
+core=huajx-core
 
-if [ test -d "$core" ] ; then
+if [ -d "$core" ] ; then
   cd $core
   git pull origin master
   git add .
