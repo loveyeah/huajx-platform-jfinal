@@ -47,7 +47,7 @@ fi
 if [ -d "huajx-admin" ] ; then
   cd huajx-admin
 
-  for module in huajx-admin-api huajx-admin-provider huajx-admin-clent ; do
+  for module in huajx-admin-api huajx-admin-provider huajx-admin-client ; do
     if [ -d "$module" ] ; then
       echo "将 "$module" 提交到配置库"
       cd $module
