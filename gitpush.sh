@@ -3,7 +3,7 @@
 echo "项目Git操作"
 
 msg="无"
-[ -n "$var" ] && msg=$1
+[ -n "$1" ] && msg=$1
 
 git add .
 
