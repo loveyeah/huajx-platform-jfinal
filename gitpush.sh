@@ -17,6 +17,7 @@ git push -u origin master
 
 util=huajx-util
 
+echo "将$util提交到配置库"
 if [ -d "$util" ] ; then
   cd $util
   git pull origin master
@@ -28,6 +29,7 @@ if [ -d "$util" ] ; then
 fi
 
 core=huajx-core
+echo "将$core提交到配置库"
 
 if [ -d "$core" ] ; then
   cd $core
