@@ -1,6 +1,11 @@
 # huajx-platform-jfinal
 Huajx platform for JFinal JBoot Admin
 
+# 安装说明
+先`git clone git@github.com:loveyeah/huajx-platform-jfinal.git`
+
+再执行 `./gitinit.sh`
+
 # JBoot
 
 # JFinal
