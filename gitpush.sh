@@ -15,28 +15,14 @@ git commit -am "$msg"
 echo "git push -u origin master"
 git push -u origin master
 
-util=huajx-util
-
-if [ -d "$util" ] ; then
-  echo "将"$util"提交到配置库"
-  cd $util
-  echo "yes" | git pull origin master
-  echo "yes"
-  git add .
-  git commit -am "$msg"
-  git push -u origin master
-  cd ..
-fi
-
-core=huajx-core
-
-if [ -d "$core" ] ; then
-  echo "将"$core"提交到配置库"
-  cd $core
-  git pull origin master
-  git add .
-  git commit -am "$msg"
-  git push -u origin master
-  cd ..
-fi
-
+for module in huajx-core huajx-util do
+  if [ -d "$module" ] ; then
+    echo "将"$module"提交到配置库"
+    cd $module
+    git pull origin master
+    git add .
+    git commit -am "$msg"
+    git push -u origin master
+    cd ..
+  fi
+done
