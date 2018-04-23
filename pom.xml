@@ -10,7 +10,7 @@
 	<modules>
 		<module>huajx-core</module>
 		<module>huajx-entity</module>
-		<module>huajx-gencode</module>
+		<!-- <module>huajx-gencode</module> -->
 		<module>huajx-admin</module>
 	</modules>
 
@@ -65,7 +65,7 @@
 		<fasterxml.jackson.version>2.9.4</fasterxml.jackson.version>
 		<mysql-connector-java.version>5.1.45</mysql-connector-java.version>
 		<logback.version>1.1.11</logback.version>
-		<UserAgentUtils.vision>1.21</UserAgentUtils.version>
+		<UserAgentUtils.version>1.21</UserAgentUtils.version>
 		<huajx.platform.version>3.0.0</huajx.platform.version>
     </properties>
 	<repositories>
@@ -118,6 +118,11 @@
 				<groupId>cn.afterturn</groupId>
 				<artifactId>easypoi-annotation</artifactId>
 				<version>${afterturn.easypoi.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.huajx.platform</groupId>
+				<artifactId>huajx-core</artifactId>
+				<version>${huajx.platform.version}</version>
 			</dependency>
         </dependencies>
     </dependencyManagement>
