@@ -7,9 +7,9 @@ git pull origin master
 msg="无"
 [ -n "$1" ] && msg=$1
 
-for module in huajx-core huajx-util ; do
+for module in huajx-core huajx-util bin ; do
   if [ -d "$module" ] ; then
-    echo "将"$module"提交到配置库"
+    echo "将 "$module" 提交到配置库"
     cd $module
     git pull origin master
     git add .
