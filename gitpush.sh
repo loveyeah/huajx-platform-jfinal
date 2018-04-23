@@ -20,11 +20,11 @@ util=huajx-util
 if [ -d "$util" ] ; then
   echo "将"$util"提交到配置库"
   cd $util
-  git pull origin master
+  echo yes | git pull origin master
   echo "yes"
   git add .
   git commit -am "$msg"
-  git push -u origin master
+  echo yes | git push -u origin master
   cd ..
 fi
 
