@@ -19,7 +19,8 @@ util=huajx-util
 
 if [ -d "$util" ] ; then
   cd $util
-  git pull origin master
+  echo -e a\n | git pull origin master
+  echo a
   git add .
   git commit -am "$msg"
   git push -u origin master
