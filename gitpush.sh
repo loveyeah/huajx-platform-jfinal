@@ -19,11 +19,12 @@ util=huajx-util
 
 if [ -d "$util" ] ; then
   cd $util
-  echo -e a\n | git pull origin master
-  echo a
+  git pull origin master
+  echo "yes"
   git add .
   git commit -am "$msg"
   git push -u origin master
+  cd ..
 fi
 
 core=huajx-core
@@ -34,5 +35,6 @@ if [ -d "$core" ] ; then
   git add .
   git commit -am "$msg"
   git push -u origin master
+  cd ..
 fi
 
