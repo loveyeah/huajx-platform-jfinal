@@ -1,3 +1,27 @@
+target/
+out/
+build/
+bin/
+*.releaseBackup
+rfs-webapp/
+.externalToolBuilders/
+.classpath
+.project
+.settings
+/*.launch
+/*.tmproj
+/ivy*
+/eclipse
+
+/logs
+*.log
+*.log.*
+rfs-webapp-bak/
+/*.war
+.iml
+.DS_Store
+._*
+
 # Compiled class file
 *.class
 
