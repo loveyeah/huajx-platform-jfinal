@@ -17,7 +17,7 @@ git push -u origin master
 
 util=./huajx-util
 
-if [-f "$util"]; then
+if [-r "$util"]; then
   cd $util
   git pull origin master
   git add .
@@ -27,7 +27,7 @@ fi
 
 core=./huajx-core
 
-if [-f "$core"]; then
+if [-r "$core"]; then
   cd $core
   git pull origin master
   git add .
