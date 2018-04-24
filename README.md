@@ -26,3 +26,26 @@ Offending RSA key in /home/dsl/.ssh/known_hosts:8
 
 具体命令：使用VIM编辑器找到相应行，删除就行了！
 
+## mysql/jdbc:设置useInformationSchema=true读取表注释信息(table_comment)
+
+(https://blog.csdn.net/10km/article/details/77389038)
+
+### 方法一：java代码实现
+```java
+# 将所有参数装入java.util.Properties 对象
+Properties props = new Properties();
+props.setProperty("username",this.username);
+props.setProperty("password",this.password); 
+props.setProperty("useInformationSchema", "true");
+# 调用getConnection(String,Properties)方法创建连接
+this.pConnection = java.sql.DriverManager.getConnection(this.url, props);
+```
+### 方法二：连接url参数
+直接将参数加到数据库连接url,如下代码中在数据连接url中添加了两个参数`characterEncoding=utf8`和`useInformationSchema=true`
+
+```java
+String url="jdbc:mysql://localhost:3306/test?characterEncoding=utf8&&useInformationSchema=true"
+this.pConnection = DriverManager.getConnection(this.url, this.username,this.password);
+```
+
+
